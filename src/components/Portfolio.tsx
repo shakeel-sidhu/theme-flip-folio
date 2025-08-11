@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
 import { useMemo } from "react";
-import { cn } from "@/lib/utils";
+
 
 const uploadedSample = "/lovable-uploads/32e4cb68-c474-4d52-b798-21e928ef556f.png";
 
@@ -74,14 +74,9 @@ const Portfolio = () => {
           {projects.map((project, idx) => (
             <article
               key={project.title}
-              className="grid items-center gap-8 lg:grid-cols-12"
+              className="grid items-start gap-8 md:grid-cols-2"
             >
-              <div
-                className={cn(
-                  "lg:col-span-6 order-1 lg:order-1",
-                  idx % 2 === 1 && "lg:order-2"
-                )}
-              >
+              <div>
                 <div className="rounded-xl border bg-card shadow-elegant overflow-hidden">
                   <img
                     src={project.image}
@@ -92,12 +87,7 @@ const Portfolio = () => {
                 </div>
               </div>
 
-              <div
-                className={cn(
-                  "lg:col-span-6 order-2 lg:order-2",
-                  idx % 2 === 1 && "lg:order-1"
-                )}
-              >
+              <div>
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
                   {project.title}
                 </h3>
