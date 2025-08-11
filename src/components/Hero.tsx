@@ -3,8 +3,12 @@ import { Star } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
+  const uploadedSample = "/images/shakeel.jpg";
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 bg-gradient-secondary">
+    <section
+      id="home"
+      className="min-h-screen flex items-center pt-20 bg-gradient-secondary"
+    >
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -19,16 +23,21 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
-                You can focus on running your business while I focus on growing it.
+                You can focus on running your business while I focus on growing
+                it.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" asChild>
-                <a href="#contact" aria-label="Go to contact section">Get Started</a>
+                <a href="#contact" aria-label="Go to contact section">
+                  Get Started
+                </a>
               </Button>
               <Button variant="glass" size="lg" asChild>
-                <a href="#portfolio" aria-label="Go to portfolio section">View Portfolio</a>
+                <a href="#portfolio" aria-label="Go to portfolio section">
+                  View Portfolio
+                </a>
               </Button>
             </div>
 
@@ -46,7 +55,10 @@ const Hero = () => {
               <div className="text-sm">
                 <div className="flex items-center space-x-1">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    <Star
+                      key={i}
+                      className="w-4 h-4 fill-primary text-primary"
+                    />
                   ))}
                 </div>
                 <p className="text-muted-foreground">10+ Happy Clients</p>
@@ -57,7 +69,7 @@ const Hero = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src={heroImage}
+                src={uploadedSample}
                 alt="Professional business specialist"
                 className="w-full h-auto rounded-2xl shadow-card"
               />
