@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
 import { useMemo } from "react";
 
-
-const uploadedSample = "/lovable-uploads/32e4cb68-c474-4d52-b798-21e928ef556f.png";
+const uploadedSample =
+  "/lovable-uploads/32e4cb68-c474-4d52-b798-21e928ef556f.png";
 
 const Portfolio = () => {
   const projects = useMemo(
@@ -56,7 +56,11 @@ const Portfolio = () => {
   );
 
   return (
-    <section id="portfolio" aria-labelledby="portfolio-heading" className="py-20 scroll-mt-24">
+    <section
+      id="portfolio"
+      aria-labelledby="portfolio-heading"
+      className="py-20 scroll-mt-24"
+    >
       <div className="container mx-auto px-6">
         <header className="max-w-3xl mx-auto text-center mb-12">
           <h2
@@ -66,7 +70,8 @@ const Portfolio = () => {
             Portfolio
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Several projects I enjoyed—case studies that highlight outcomes, UX, and performance.
+            Several projects I enjoyed—case studies that highlight outcomes, UX,
+            and performance.
           </p>
         </header>
 
@@ -76,7 +81,8 @@ const Portfolio = () => {
               key={project.title}
               className="grid items-start gap-8 md:grid-cols-2"
             >
-              <div>
+              {/* Image section */}
+              <div className={idx % 2 === 1 ? "md:order-2" : "md:order-1"}>
                 <div className="rounded-xl border bg-card shadow-elegant overflow-hidden">
                   <img
                     src={project.image}
@@ -87,11 +93,14 @@ const Portfolio = () => {
                 </div>
               </div>
 
-              <div>
+              {/* Text section */}
+              <div className={idx % 2 === 1 ? "md:order-1" : "md:order-2"}>
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
                   {project.title}
                 </h3>
-                <p className="mt-3 text-muted-foreground">{project.description}</p>
+                <p className="mt-3 text-muted-foreground">
+                  {project.description}
+                </p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
@@ -106,7 +115,10 @@ const Portfolio = () => {
 
                 <div className="mt-6">
                   <Button asChild variant="secondary">
-                    <a href={project.url} aria-label={`Visit project: ${project.title}`}>
+                    <a
+                      href={project.url}
+                      aria-label={`Visit project: ${project.title}`}
+                    >
                       Visit project
                     </a>
                   </Button>
