@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
@@ -16,7 +22,8 @@ const Contact = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your business? Get in touch and let's discuss your next project.
+            Ready to transform your business? Get in touch and let's discuss
+            your next project.
           </p>
         </div>
 
@@ -28,7 +35,8 @@ const Contact = () => {
                   Get in Touch
                 </CardTitle>
                 <CardDescription className="text-muted-foreground">
-                  I'd love to hear about your project and discuss how we can work together.
+                  I'd love to hear about your project and discuss how we can
+                  work together.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -38,7 +46,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Email</p>
-                    <p className="text-muted-foreground">hello@shakeel.dev</p>
+                    <p className="text-muted-foreground">
+                      shakeeldev786@gmail.com
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -47,7 +57,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Phone</p>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+92 (317) 411-2323</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -69,7 +79,8 @@ const Contact = () => {
                 Send a Message
               </CardTitle>
               <CardDescription className="text-muted-foreground">
-                Fill out the form below and I'll get back to you within 24 hours.
+                Fill out the form below and I'll get back to you within 24
+                hours.
               </CardDescription>
             </CardHeader>
             <CardContent>
