@@ -27,8 +27,8 @@ const Header = () => {
             <a href="#testimonials" className="text-foreground hover:text-primary transition-smooth">
               Testimonials
             </a>
-            <Button variant="hero" size="sm">
-              Contact
+            <Button variant="hero" size="sm" asChild>
+              <a href="#contact" aria-label="Go to contact section">Contact</a>
             </Button>
           </nav>
 
@@ -58,8 +58,8 @@ const Header = () => {
             <a href="#testimonials" className="block text-foreground hover:text-primary transition-smooth">
               Testimonials
             </a>
-            <Button variant="hero" size="sm" className="w-full">
-              Contact
+            <Button variant="hero" size="sm" className="w-full" asChild>
+              <a href="#contact" aria-label="Go to contact section">Contact</a>
             </Button>
           </nav>
         )}
