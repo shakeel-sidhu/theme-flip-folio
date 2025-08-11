@@ -1,52 +1,36 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
 import { useMemo } from "react";
+import { cn } from "@/lib/utils";
+
+const uploadedSample = "/lovable-uploads/32e4cb68-c474-4d52-b798-21e928ef556f.png";
 
 const Portfolio = () => {
   const projects = useMemo(
     () => [
       {
+        title: "StarzPlay",
+        description:
+          "Subscription video-on-demand platform with thousands of movies, series, and originals across the MENA region.",
+        image: uploadedSample,
+        url: "#",
+        tags: ["Streaming", "OTT", "Responsive"],
+      },
+      {
         title: "E-commerce Revamp",
-        description: "Modernized storefront with optimized checkout and responsive UI.",
+        description:
+          "Modernized storefront with optimized checkout and responsive UI.",
         image: heroImage,
         url: "#",
         tags: ["React", "Tailwind", "UX"],
       },
       {
         title: "Analytics Dashboard",
-        description: "Interactive charts and real-time metrics for business insights.",
+        description:
+          "Interactive charts and real-time metrics for business insights.",
         image: heroImage,
         url: "#",
         tags: ["Recharts", "React Query", "Radix"],
-      },
-      {
-        title: "Marketing Site",
-        description: "High-performance landing pages with A/B testing setup.",
-        image: heroImage,
-        url: "#",
-        tags: ["SEO", "Vite", "Accessibility"],
-      },
-      {
-        title: "Portfolio CMS",
-        description: "Content-managed portfolio with dynamic routing and search.",
-        image: heroImage,
-        url: "#",
-        tags: ["Headless", "SPA", "Performance"],
-      },
-      {
-        title: "Mobile Web App",
-        description: "PWA with offline support and app-like interactions.",
-        image: heroImage,
-        url: "#",
-        tags: ["PWA", "Caching", "Responsive"],
-      },
-      {
-        title: "Internal Tools Suite",
-        description: "Admin panels and workflows to streamline operations.",
-        image: heroImage,
-        url: "#",
-        tags: ["Dashboards", "Auth", "Automation"],
       },
     ],
     []
@@ -74,38 +58,56 @@ const Portfolio = () => {
   return (
     <section id="portfolio" aria-labelledby="portfolio-heading" className="py-20 scroll-mt-24">
       <div className="container mx-auto px-6">
-        <header className="max-w-2xl mx-auto text-center mb-12">
-          <h2 id="portfolio-heading" className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+        <header className="max-w-3xl mx-auto text-center mb-12">
+          <h2
+            id="portfolio-heading"
+            className="text-3xl md:text-4xl font-bold tracking-tight text-foreground"
+          >
             Portfolio
           </h2>
           <p className="mt-3 text-muted-foreground">
-            A selection of projects showcasing clean architecture, performance, and delightful UX.
+            Several projects I enjoyed—case studies that highlight outcomes, UX, and performance.
           </p>
         </header>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <Card key={project.title} className="group overflow-hidden transition-smooth hover:shadow-elegant">
-              <CardHeader className="p-0">
-                <div className="aspect-[16/10] overflow-hidden">
-                  {/* Image optimization: lazy loading with descriptive alt */}
+        <div className="space-y-16">
+          {projects.map((project, idx) => (
+            <article
+              key={project.title}
+              className="grid items-center gap-8 lg:grid-cols-12"
+            >
+              <div
+                className={cn(
+                  "lg:col-span-6 order-1 lg:order-1",
+                  idx % 2 === 1 && "lg:order-2"
+                )}
+              >
+                <div className="rounded-xl border bg-card shadow-elegant overflow-hidden">
                   <img
                     src={project.image}
                     alt={`${project.title} project screenshot`}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-smooth group-hover:scale-[1.03]"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="text-xl">{project.title}</CardTitle>
-                <CardDescription className="mt-2">{project.description}</CardDescription>
+              </div>
 
-                <div className="mt-4 flex flex-wrap gap-2">
+              <div
+                className={cn(
+                  "lg:col-span-6 order-2 lg:order-2",
+                  idx % 2 === 1 && "lg:order-1"
+                )}
+              >
+                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
+                  {project.title}
+                </h3>
+                <p className="mt-3 text-muted-foreground">{project.description}</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center rounded-full bg-secondary/50 text-secondary-foreground px-3 py-1 text-xs"
+                      className="inline-flex items-center rounded-full bg-secondary/60 text-secondary-foreground px-3 py-1 text-xs"
                     >
                       {tag}
                     </span>
@@ -114,13 +116,13 @@ const Portfolio = () => {
 
                 <div className="mt-6">
                   <Button asChild variant="secondary">
-                    <a href={project.url} aria-label={`View details for ${project.title}`}>
-                      View project
+                    <a href={project.url} aria-label={`Visit project: ${project.title}`}>
+                      Visit project
                     </a>
                   </Button>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </article>
           ))}
         </div>
 
