@@ -24,11 +24,11 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg">
-                Get Started
+              <Button variant="hero" size="lg" asChild>
+                <a href="#contact" aria-label="Go to contact section">Get Started</a>
               </Button>
-              <Button variant="glass" size="lg">
-                View Portfolio
+              <Button variant="glass" size="lg" asChild>
+                <a href="#portfolio" aria-label="Go to portfolio section">View Portfolio</a>
               </Button>
             </div>
 
