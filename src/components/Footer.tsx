@@ -72,6 +72,22 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#experience"
+                  className="hover:text-primary transition-smooth"
+                >
+                  Experience
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  className="hover:text-primary transition-smooth"
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
                   href="#portfolio"
                   className="hover:text-primary transition-smooth"
                 >
