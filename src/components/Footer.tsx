@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-6">
@@ -107,7 +108,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 Shakeel Portfolio. All rights reserved.</p>
+          <p>&copy; {currentYear} Shakeel Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>
