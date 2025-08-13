@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="font-playfair text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Shakeel Ahmed
+              Shakeel Portfolio
             </div>
             <p className="text-muted-foreground">
               Helping businesses grow through expert design, development, and
@@ -72,6 +72,22 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#experience"
+                  className="hover:text-primary transition-smooth"
+                >
+                  Experience
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  className="hover:text-primary transition-smooth"
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
                   href="#portfolio"
                   className="hover:text-primary transition-smooth"
                 >
@@ -108,7 +124,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} Shakeel Ahmed. All rights reserved.</p>
+          <p>&copy; {currentYear} Shakeel Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>
