@@ -69,7 +69,7 @@ export default {
         "gradient-card": "var(--gradient-card)",
       },
       boxShadow: {
-        // glow: "var(--shadow-glow)",
+        glow: "var(--shadow-glow)",
         card: "var(--shadow-card)",
       },
       transitionTimingFunction: {
