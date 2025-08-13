@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="font-playfair text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Shakeel Portfolio
+              Shakeel Ahmed
             </div>
             <p className="text-muted-foreground">
               Helping businesses grow through expert design, development, and
@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} Shakeel Portfolio. All rights reserved.</p>
+          <p>&copy; {currentYear} Shakeel Ahmed. All rights reserved.</p>
         </div>
       </div>
     </footer>
