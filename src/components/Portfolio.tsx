@@ -196,7 +196,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className="mt-6">
-                  <Button asChild variant="secondary">
+                  <Button asChild variant="hero">
                     <a
                       href={project.url}
                       target="_blank"
