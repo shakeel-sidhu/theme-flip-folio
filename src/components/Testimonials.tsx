@@ -1,5 +1,12 @@
 import { Star } from "lucide-react";
 import { useMemo } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Testimonials = () => {
   const testimonials = useMemo(
@@ -23,6 +30,20 @@ const Testimonials = () => {
         role: "Ops Lead, SaaS",
         quote:
           "The analytics dashboard finally gives us answers. Performance, accessibility, and details were all top-notch.",
+        rating: 5,
+      },
+      {
+        name: "Ahmed Hassan",
+        role: "CTO, FinTech Startup",
+        quote:
+          "Shakeel delivered a secure payment gateway integration ahead of schedule. His technical expertise and attention to security details was impressive.",
+        rating: 5,
+      },
+      {
+        name: "Sara Mitchell",
+        role: "Marketing Director, E-commerce",
+        quote:
+          "The mobile-first redesign boosted our conversion rates by 40%. Shakeel's understanding of user behavior is exceptional.",
         rating: 5,
       },
     ],
@@ -59,22 +80,34 @@ const Testimonials = () => {
           </p>
         </header>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t) => (
-            <article key={t.name} className="rounded-xl border bg-card shadow-elegant p-6 h-full flex flex-col">
-              <div className="flex items-center gap-1" aria-label={`${t.rating} out of 5 stars`}>
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className={`${i <= t.rating ? "fill-primary text-primary" : "text-muted-foreground"} w-4 h-4`} />
-                ))}
-              </div>
-              <p className="mt-4 text-muted-foreground">“{t.quote}”</p>
-              <div className="mt-6">
-                <p className="font-medium text-foreground">{t.name}</p>
-                <p className="text-sm text-muted-foreground">{t.role}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {testimonials.map((t) => (
+              <CarouselItem key={t.name} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <article className="rounded-xl border bg-card shadow-elegant p-6 h-full flex flex-col">
+                  <div className="flex items-center gap-1" aria-label={`${t.rating} out of 5 stars`}>
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <Star key={i} className={`${i <= t.rating ? "fill-primary text-primary" : "text-muted-foreground"} w-4 h-4`} />
+                    ))}
+                  </div>
+                  <p className="mt-4 text-muted-foreground">"{t.quote}"</p>
+                  <div className="mt-6">
+                    <p className="font-medium text-foreground">{t.name}</p>
+                    <p className="text-sm text-muted-foreground">{t.role}</p>
+                  </div>
+                </article>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
 
         {/* Structured data for SEO */}
         <script
