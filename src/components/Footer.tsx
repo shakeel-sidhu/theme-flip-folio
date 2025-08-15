@@ -40,22 +40,22 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Services</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-smooth">
+                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
                   Web Design
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-smooth">
+                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
                   Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-smooth">
+                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
                   Consulting
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-smooth">
+                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
                   Maintenance
                 </a>
               </li>
@@ -66,14 +66,14 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Company</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-smooth">
+                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
                   About
                 </a>
               </li>
               <li>
                 <a
                   href="#experience"
-                  className="hover:text-primary transition-smooth"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
                 >
                   Experience
                 </a>
@@ -81,7 +81,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#skills"
-                  className="hover:text-primary transition-smooth"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
                 >
                   Skills
                 </a>
@@ -89,7 +89,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#achievements"
-                  className="hover:text-primary transition-smooth"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
                 >
                   Achievements
                 </a>
@@ -97,7 +97,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#portfolio"
-                  className="hover:text-primary transition-smooth"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
                 >
                   Portfolio
                 </a>
@@ -105,7 +105,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#testimonials"
-                  className="hover:text-primary transition-smooth"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
                 >
                   Testimonials
                 </a>
@@ -113,7 +113,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#contact"
-                  className="hover:text-primary transition-smooth"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
                 >
                   Contact
                 </a>

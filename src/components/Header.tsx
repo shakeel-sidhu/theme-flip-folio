@@ -17,43 +17,43 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="#home"
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Home
             </a>
             <a
               href="#services"
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Services
             </a>
             <a
               href="#experience"
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Experience
             </a>
             <a
               href="#skills"
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Skills
             </a>
             <a
               href="#achievements"
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Achievements
             </a>
             <a
               href="#portfolio"
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Portfolio
             </a>
             <a
               href="#testimonials"
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Testimonials
             </a>
@@ -80,43 +80,43 @@ const Header = () => {
           <nav className="md:hidden mt-4 pb-4 space-y-4">
             <a
               href="#home"
-              className="block text-foreground hover:text-primary transition-smooth"
+              className="block text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Home
             </a>
             <a
               href="#services"
-              className="block text-foreground hover:text-primary transition-smooth"
+              className="block text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Services
             </a>
             <a
               href="#experience"
-              className="block text-foreground hover:text-primary transition-smooth"
+              className="block text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Experience
             </a>
             <a
               href="#skills"
-              className="block text-foreground hover:text-primary transition-smooth"
+              className="block text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Skills
             </a>
             <a
               href="#achievements"
-              className="block text-foreground hover:text-primary transition-smooth"
+              className="block text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Achievements
             </a>
             <a
               href="#portfolio"
-              className="block text-foreground hover:text-primary transition-smooth"
+              className="block text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Portfolio
             </a>
             <a
               href="#testimonials"
-              className="block text-foreground hover:text-primary transition-smooth"
+              className="block text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
               Testimonials
             </a>

@@ -101,10 +101,34 @@ export default {
             height: "0",
           },
         },
+        "click-scale": {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "50%": {
+            transform: "scale(0.95)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
+        "click-glow": {
+          "0%": {
+            boxShadow: "0 0 0 0 hsl(var(--primary) / 0.4)",
+          },
+          "50%": {
+            boxShadow: "0 0 0 4px hsl(var(--primary) / 0.1)",
+          },
+          "100%": {
+            boxShadow: "0 0 0 0 hsl(var(--primary) / 0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "click-scale": "click-scale 0.15s ease-out",
+        "click-glow": "click-glow 0.3s ease-out",
       },
     },
   },
