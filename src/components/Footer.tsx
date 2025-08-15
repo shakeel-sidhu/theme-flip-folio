@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="font-playfair text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Shakeel Ahmed
+            <div className="cursor-pointer font-playfair text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <a href="#">Shakeel Ahmed</a>
             </div>
             <p className="text-muted-foreground">
               Helping businesses grow through expert design, development, and
