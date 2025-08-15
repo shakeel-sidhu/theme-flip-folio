@@ -88,6 +88,14 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#achievements"
+                  className="hover:text-primary transition-smooth"
+                >
+                  Achievements
+                </a>
+              </li>
+              <li>
+                <a
                   href="#portfolio"
                   className="hover:text-primary transition-smooth"
                 >

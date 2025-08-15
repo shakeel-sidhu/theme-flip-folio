@@ -40,6 +40,12 @@ const Header = () => {
               Skills
             </a>
             <a
+              href="#achievements"
+              className="text-foreground hover:text-primary transition-smooth"
+            >
+              Achievements
+            </a>
+            <a
               href="#portfolio"
               className="text-foreground hover:text-primary transition-smooth"
             >
@@ -95,6 +101,12 @@ const Header = () => {
               className="block text-foreground hover:text-primary transition-smooth"
             >
               Skills
+            </a>
+            <a
+              href="#achievements"
+              className="block text-foreground hover:text-primary transition-smooth"
+            >
+              Achievements
             </a>
             <a
               href="#portfolio"
