@@ -1,27 +1,27 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Palette, Code2, Shield, Wrench } from "lucide-react";
+import { Globe, Zap, CreditCard, TrendingUp } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Palette,
-      title: "Designs that impress",
-      description: "Good design's not about what medium you're working in. It's about thinking hard about what you want to do and what you have to work with before you start. Because Information is only useful when it can be understood."
+      icon: Globe,
+      title: "OTT & Streaming Applications",
+      description: "Build scalable web applications for millions of users with React.js and Next.js. From content delivery to user management, I create seamless streaming experiences that keep users engaged."
     },
     {
-      icon: Code2,
-      title: "Build Features that matter",
-      description: "A business or a product isn't really a business or a product unless it does something valuable. The quickest way to failure is to build something nobody wants, needs or cares about. Features should be little bundles of value."
+      icon: CreditCard,
+      title: "Payment Gateway Integration",
+      description: "Integrate multiple payment solutions (PayTM, UPI, Adyen, PayU) with fraud prevention systems. Secure, compliant payment flows that increase conversion rates and protect your business."
     },
     {
-      icon: Wrench,
-      title: "Maintain your Successful Website",
-      description: "A successful website does three things: It attracts the right kinds of visitors. Guides them to the main services or product you offer. Collect Contact details for future ongoing relation."
+      icon: Zap,
+      title: "Performance Optimization",
+      description: "Optimize API integrations, reduce load times, and improve user experience. I focus on clean code, efficient data flow, and modern development practices for maximum performance."
     },
     {
-      icon: Shield,
-      title: "Security & Performance",
-      description: "Ensuring your digital presence is secure, fast, and reliable. From SSL certificates to performance optimization, I handle the technical details so you can focus on your business."
+      icon: TrendingUp,
+      title: "E-commerce & POS Systems",
+      description: "Full-stack development of e-commerce platforms and point-of-sale systems. From inventory management to checkout flows, I deliver solutions that drive business growth."
     }
   ];
 

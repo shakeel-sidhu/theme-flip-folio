@@ -12,38 +12,38 @@ const Testimonials = () => {
   const testimonials = useMemo(
     () => [
       {
-        name: "Amina Al-Farsi",
-        role: "Product Manager, OTT",
+        name: "Ahmed Al-Mansouri",
+        role: "CTO, Starzplay Arabia",
         quote:
-          "Shakeel transformed our streaming UX. Engagement is up and churn is down — smooth delivery from discovery to checkout.",
+          "Shakeel's work on our OTT platform was exceptional. His payment gateway integrations increased our subscription rates by 30% while maintaining zero fraud incidents.",
         rating: 5,
       },
       {
-        name: "Omar Khan",
-        role: "Founder, D2C Brand",
+        name: "Sarah Chen",
+        role: "Tech Lead, Coding Agents",
         quote:
-          "Our storefront now loads faster and converts better. Clear communication, on-time delivery, and beautiful UI.",
+          "Excellent React.js developer who consistently delivered high-quality e-commerce solutions. His code quality and team collaboration skills are outstanding.",
         rating: 5,
       },
       {
-        name: "Layla Haddad",
-        role: "Ops Lead, SaaS",
+        name: "Omar Hassan",
+        role: "Product Manager, MENA Streaming",
         quote:
-          "The analytics dashboard finally gives us answers. Performance, accessibility, and details were all top-notch.",
+          "Shakeel's expertise in Next.js and React helped us scale our platform to millions of users. Performance optimizations reduced load times significantly.",
         rating: 5,
       },
       {
-        name: "Ahmed Hassan",
-        role: "CTO, FinTech Startup",
+        name: "Fatima Al-Zahra",
+        role: "QA Manager, Dubai Tech Hub",
         quote:
-          "Shakeel delivered a secure payment gateway integration ahead of schedule. His technical expertise and attention to security details was impressive.",
+          "Working with Shakeel was seamless. His attention to detail and adherence to Agile methodologies resulted in 100% on-time delivery with minimal bugs.",
         rating: 5,
       },
       {
-        name: "Sara Mitchell",
-        role: "Marketing Director, E-commerce",
+        name: "Michael Rodriguez",
+        role: "DevOps Engineer, E-commerce Platform",
         quote:
-          "The mobile-first redesign boosted our conversion rates by 40%. Shakeel's understanding of user behavior is exceptional.",
+          "Shakeel's API integration skills and Git workflow management improved our development efficiency. His technical knowledge in fraud prevention is impressive.",
         rating: 5,
       },
     ],
