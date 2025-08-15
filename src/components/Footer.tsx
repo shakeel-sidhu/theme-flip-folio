@@ -114,7 +114,7 @@ const Footer = () => {
                   href="#portfolio"
                   className="hover:text-primary transition-smooth active:animate-click-scale"
                 >
-                  Portfolio
+                  Projects
                 </a>
               </li>
               <li>

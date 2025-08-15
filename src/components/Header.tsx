@@ -49,7 +49,7 @@ const Header = () => {
               href="#portfolio"
               className="text-foreground hover:text-primary transition-smooth active:animate-click-scale"
             >
-              Portfolio
+              Projects
             </a>
             <a
               href="#testimonials"

@@ -147,7 +147,7 @@ const Portfolio = () => {
             id="portfolio-heading"
             className="text-3xl md:text-4xl font-bold tracking-tight text-foreground"
           >
-            Portfolio
+            Projects
           </h2>
           <p className="mt-3 text-muted-foreground">
             A curated selection of projects I’ve enjoyed working on, featuring
