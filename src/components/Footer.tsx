@@ -40,23 +40,35 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Services</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
-                  Web Design
+                <a
+                  href="#"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
+                >
+                  React.js & Next.js Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
-                  Development
+                <a
+                  href="#"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
+                >
+                  API Integration & Optimization
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
-                  Consulting
+                <a
+                  href="#"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
+                >
+                  UI/UX Implementation with TailwindCSS
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
-                  Maintenance
+                <a
+                  href="#"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
+                >
+                  Performance & Scalability
                 </a>
               </li>
             </ul>
@@ -66,7 +78,10 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Company</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-smooth active:animate-click-scale">
+                <a
+                  href="#"
+                  className="hover:text-primary transition-smooth active:animate-click-scale"
+                >
                   About
                 </a>
               </li>

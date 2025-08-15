@@ -21,9 +21,10 @@ const Contact = () => {
               Work Together
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your business? Get in touch and let's discuss
-            your next project.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Open to collaborating on innovative web applications and scalable
+            solutions. Get in touch to discuss how I can contribute to your
+            team’s success.
           </p>
         </div>
 
@@ -35,8 +36,8 @@ const Contact = () => {
                   Get in Touch
                 </CardTitle>
                 <CardDescription className="text-muted-foreground">
-                  I'd love to hear about your project and discuss how we can
-                  work together.
+                  I’d love to connect and discuss how my skills and experience
+                  can help drive your team’s success.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
