@@ -41,7 +41,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div
@@ -63,7 +63,7 @@ const Hero = () => {
                 </div>
                 <p className="text-muted-foreground">10+ Happy Clients</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="relative">
