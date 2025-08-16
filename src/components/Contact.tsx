@@ -8,9 +8,67 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
 
 const Contact = () => {
+  const { toast } = useToast();
+
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .min(2, "Name must be at least 2 characters")
+      .required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    subject: Yup.string()
+      .min(5, "Subject must be at least 5 characters")
+      .required("Subject is required"),
+    message: Yup.string()
+      .min(10, "Message must be at least 10 characters")
+      .required("Message is required"),
+  });
+
+  const initialValues = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const handleSubmit = async (values: typeof initialValues, { setSubmitting, resetForm }: any) => {
+    try {
+      const messageData = {
+        ...values,
+        timestamp: new Date().toISOString(),
+        id: Date.now(),
+      };
+
+      await axios.post(
+        "https://form-store-447b9-default-rtdb.firebaseio.com/marks.json",
+        messageData
+      );
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+
+      resetForm();
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-gradient-secondary">
       <div className="container mx-auto px-6">
@@ -85,32 +143,90 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Input
-                    placeholder="Your Name"
-                    className="bg-background border-border"
-                  />
-                  <Input
-                    type="email"
-                    placeholder="Your Email"
-                    className="bg-background border-border"
-                  />
-                </div>
-                <Input
-                  placeholder="Subject"
-                  className="bg-background border-border"
-                />
-                <Textarea
-                  placeholder="Your Message"
-                  rows={5}
-                  className="bg-background border-border"
-                />
-                <Button variant="hero" size="lg" className="w-full">
-                  <Send className="w-4 h-4 mr-2" />
-                  Send Message
-                </Button>
-              </form>
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+              >
+                {({ isSubmitting, errors, touched }) => (
+                  <Form className="space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <Field
+                          as={Input}
+                          name="name"
+                          placeholder="Your Name"
+                          className={`bg-background border-border ${
+                            errors.name && touched.name ? "border-destructive" : ""
+                          }`}
+                        />
+                        <ErrorMessage
+                          name="name"
+                          component="p"
+                          className="text-sm text-destructive mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Field
+                          as={Input}
+                          name="email"
+                          type="email"
+                          placeholder="Your Email"
+                          className={`bg-background border-border ${
+                            errors.email && touched.email ? "border-destructive" : ""
+                          }`}
+                        />
+                        <ErrorMessage
+                          name="email"
+                          component="p"
+                          className="text-sm text-destructive mt-1"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <Field
+                        as={Input}
+                        name="subject"
+                        placeholder="Subject"
+                        className={`bg-background border-border ${
+                          errors.subject && touched.subject ? "border-destructive" : ""
+                        }`}
+                      />
+                      <ErrorMessage
+                        name="subject"
+                        component="p"
+                        className="text-sm text-destructive mt-1"
+                      />
+                    </div>
+                    <div>
+                      <Field
+                        as={Textarea}
+                        name="message"
+                        placeholder="Your Message"
+                        rows={5}
+                        className={`bg-background border-border ${
+                          errors.message && touched.message ? "border-destructive" : ""
+                        }`}
+                      />
+                      <ErrorMessage
+                        name="message"
+                        component="p"
+                        className="text-sm text-destructive mt-1"
+                      />
+                    </div>
+                    <Button 
+                      type="submit" 
+                      variant="hero" 
+                      size="lg" 
+                      className="w-full"
+                      disabled={isSubmitting}
+                    >
+                      <Send className="w-4 h-4 mr-2" />
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </Button>
+                  </Form>
+                )}
+              </Formik>
             </CardContent>
           </Card>
         </div>
