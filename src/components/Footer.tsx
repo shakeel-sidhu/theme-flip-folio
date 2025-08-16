@@ -12,8 +12,8 @@ const Footer = () => {
               <a href="#">Shakeel Ahmed</a>
             </div>
             <p className="text-muted-foreground">
-              Helping businesses grow through expert design, development, and
-              digital solutions.
+              Delivering impactful digital solutions through expert frontend
+              engineering and user-focused design.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon">

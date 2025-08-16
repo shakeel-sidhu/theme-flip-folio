@@ -16,15 +16,20 @@ const Hero = () => {
               <p className="text-accent font-inter font-medium">
                 The only value proposition that really matters:
               </p>
-              <h1 className="font-playfair text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-                It's Time for a{" "}
+              <h1 className="font-playfair text-5xl lg:text-[62px] font-bold text-foreground leading-tight">
+                Let’s{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                  Build
+                </span>{" "}
+                Something Great Together
+                {/* It's Time for a{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   Switch-Up
-                </span>
+                </span> */}
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
-                You can focus on running your business while I focus on growing
-                it.
+                While you focus on your goals, I’ll craft scalable,
+                high-performance web solutions that help your business grow.
               </p>
             </div>
 
