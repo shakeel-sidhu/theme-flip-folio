@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 import { useMemo } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 
 const Testimonials = () => {
+  const isMobile = useIsMobile();
   const testimonials = useMemo(
     () => [
       {
@@ -98,11 +100,13 @@ const Testimonials = () => {
             align: "start",
             loop: true,
           }}
-          plugins={[
-            Autoplay({
-              delay: 4000,
-            }),
-          ]}
+          plugins={
+            isMobile ? [
+              Autoplay({
+                delay: 4000,
+              }),
+            ] : []
+          }
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
