@@ -13,19 +13,19 @@ const Services = () => {
       icon: Globe,
       title: "OTT & Streaming Applications",
       description:
-        "Developed scalable OTT and streaming platforms using React.js and Next.js, supporting millions of users. Implemented efficient content delivery, user management, and seamless playback experiences to maintain high engagement.",
+        "Developed and optimized scalable OTT streaming applications using React.js, Next.js, and JavaScript, delivering high-performance, seamless video playback and personalized user experiences for over 3M+ users across the MENA region.",
     },
     {
       icon: CreditCard,
       title: "Payment Gateway Integration",
       description:
-        "Integrated multiple payment solutions (PayTM, UPI, Adyen, PayU) with fraud prevention measures. Delivered secure, compliant, and high-conversion payment flows to improve transaction reliability.",
+        "Integrated and optimized multiple payment gateways (PayTM, UPI, PayU, Adyen, and Credit Card), increasing subscription conversions by 30% while implementing Empello fraud prevention to ensure secure and reliable transactions.",
     },
     {
       icon: Zap,
       title: "Performance Optimization",
       description:
-        "Optimized API integrations, reduced load times, and improved overall UX. Applied clean code practices, efficient data flows, and modern performance techniques to achieve maximum application speed.",
+        "Optimized React.js and Next.js application performance by implementing code splitting, lazy loading, and efficient rendering techniques, reducing video startup time by 55% (18s → 8s) and improving load times for 3M+ users across the MENA region.",
     },
     {
       icon: TrendingUp,

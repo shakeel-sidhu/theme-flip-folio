@@ -7,12 +7,14 @@ const ProfessionalExperience = () => {
       company: "Starzplay Arabia, Dubai",
       period: "Apr 2022 – Present",
       achievements: [
-        "Engineered and maintained high-traffic OTT web applications for millions of users across the MENA region using React.js, JavaScript, and Next.js",
-        "Integrated multiple payment gateways (PayTM, UPI, Credit Card, PayU, Adyen) leading to a 30% increase in subscription purchases",
-        "Implemented Empello fraud prevention for carrier billing, achieving 100% detection and prevention of fraudulent transactions",
-        "Designed and developed new features with UI/UX teams, improving conversion rates by 25%",
-        "Optimized API integrations with backend teams for seamless data flow and reduced load times",
-        "Managed multiple development streams efficiently using Git and Agile methodologies"
+        "Drove performance and scalability improvements for STARZPLAY's OTT platform serving 3M+ users across the MENA region, delivering a faster and more reliable streaming experience using React.js, Next.js, and JavaScript.",
+        "Played a key role in migrating a large-scale legacy PHP platform to Next.js in a live production environment, improving maintainability, developer productivity, and long-term scalability while ensuring seamless feature parity for millions of active users.",
+        "Reduced video startup time by more than 55% (18s → 8s) by integrating the video player directly into the main application repository, eliminating cross-domain playback dependencies and significantly improving user experience.",
+        "Increased subscription conversion rates by 30% through the integration and optimization of multiple payment gateways including PayTM, UPI, PayU, Adyen, and Credit Card payments.",
+        "Strengthened platform security and revenue protection by implementing Empello fraud prevention for carrier billing, achieving 100% detection and prevention of fraudulent transactions.",
+        "Collaborated closely with UI/UX designers and backend engineers to deliver high-impact product enhancements, contributing to a 25% improvement in conversion rates and overall application performance.",
+        "Optimized API integrations and frontend architecture to improve application responsiveness, reduce load times, and ensure seamless data flow across services.",
+        "Managed multiple development streams using Git and Agile methodologies while delivering high-quality features within sprint timelines."
       ]
     },
     {
