@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
-  const uploadedSample = "/images/shakeel.png";
+  const uploadedSample = "/images/shakeel-bg.png";
   return (
     <section
       id="home"
